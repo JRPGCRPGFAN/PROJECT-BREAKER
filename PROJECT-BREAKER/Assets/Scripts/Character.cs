@@ -20,7 +20,7 @@ public class Character : MonoBehaviour
     public int actionPoints;
 
     public string characterName;
-    private int currnetVitality;
+    private int currentVitality;
 
     // Start is called before the first frame update
     void Start()
@@ -33,4 +33,8 @@ public class Character : MonoBehaviour
     {
         
     }
+
+    public int getCurrentVitality { get; set; }
+    public int getVitality { get; set; }
+
 }
