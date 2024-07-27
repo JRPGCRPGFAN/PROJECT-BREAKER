@@ -6,21 +6,23 @@ using UnityEngine.UI;
 // Encapsulates the battle hub variables into one class.
 public class BattleHUB : MonoBehaviour
 {
-    public Text characterName;
-    public Text characterHP;
+    public TMPro.TextMeshProUGUI characterName;
+    public TMPro.TextMeshProUGUI characterHP;
     public Slider characterHpSlider;
 
     // Fill out the battle HUB with the character's data.
     public void SetupHUB(Character character)
     {
-        characterName.text = character.name;
-        characterHP.text = character.getCurrentVitality + "HP/" 
-            + character.getVitality + "HP";
-        SetCharacterHpSlider(character.getVitality);
+        characterName.text = character.characterName;
+        characterHP.text = character.CurrentVitality + "/" 
+            + character.Vitality + "HP";
+        SetCharacterHpSlider(character.CurrentVitality, character.Vitality);
     }
 
-    public void SetCharacterHpSlider(int newHP) 
+    public void SetCharacterHpSlider(int currentHp, int maxHp) 
     {
-        characterHpSlider.value = newHP;
+        characterHpSlider.maxValue = maxHp;
+        characterHpSlider.value = currentHp;
+        
     }
 }

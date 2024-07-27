@@ -22,19 +22,32 @@ public class Character : MonoBehaviour
     public string characterName;
     private int currentVitality;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        
+        CurrentVitality = Vitality;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// Logs to console character stats in json format.
+    /// </summary>
+    public void LogStats()
     {
-        
+        Debug.Log("{\"vitality\":\"" + vitality + "\"," +
+            "{\"stamina\":\"" + stamina + "\"," +
+            "{\"defense\":\"" + defense + "\"," +
+            "{\"strength\":\"" + strength + "\"," +
+            "{\"intelligence\":\"" + intelligence + "\"," +
+            "{\"concentration\":\"" + concentration + "\"," +
+            "{\"dexterity\":\"" + dexterity + "\"," +
+            "{\"agility\":\"" + agility + "\"," +
+            "{\"accuracy\":\"" + accuracy + "\"," +
+            "{\"actionPoints\":\"" + actionPoints + "\"," +
+            "{\"characterName\":\"" + characterName + "\"," +
+            "{\"currentVitality\":\"" + currentVitality + "\"}");
     }
 
-    public int getCurrentVitality { get; set; }
-    public int getVitality { get; set; }
+    // Getters and Setters
 
+    public int CurrentVitality { get { return currentVitality; } set { currentVitality = value; } }
+    public int Vitality { get { return vitality; } set { vitality = value; } }
 }
