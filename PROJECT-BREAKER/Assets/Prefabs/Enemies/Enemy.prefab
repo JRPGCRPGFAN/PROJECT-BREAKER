@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5025b13de0579e2479db3b394919a08c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vitality: 200
+  maxVitality: 150
   stamina: 40
   defense: 20
   strength: 20

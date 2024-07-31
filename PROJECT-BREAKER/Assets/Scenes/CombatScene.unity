@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 62943152}
   - component: {fileID: 62943154}
   - component: {fileID: 62943153}
+  - component: {fileID: 62943155}
   m_Layer: 5
   m_Name: ActionPanel
   m_TagString: Untagged
@@ -201,6 +202,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62943151}
   m_CullTransparentMesh: 1
+--- !u!114 &62943155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62943151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4328ca8771643248a9d4daf47a59556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &196868323
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +750,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 547424367}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 62943155}
+        m_TargetAssemblyTypeName: PlayerActionHUB, Assembly-CSharp
+        m_MethodName: AttackInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &547424367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -902,9 +927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01928a2693f65654b9dbe2d66febb51a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allies:
+  characterPrefab: {fileID: 0}
+  alliesGO:
   - {fileID: 9195862690315625699, guid: c7a968e4f14a3064e8eca05130263309, type: 3}
-  enemies:
+  enemiesGO:
   - {fileID: 146059446624328935, guid: d2f7d82d304a1d2428ed8ca5159a23fc, type: 3}
   background: {fileID: 603190308452300547, guid: 2cd451103e9305a42a2569abb5caaa1b, type: 3}
   hubManager: {fileID: 1473188773}
@@ -1533,6 +1559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleHUB: {fileID: 1691487823}
+  playerActionHUB: {fileID: 62943155}
+  combatManager: {fileID: 823210727}
 --- !u!1 &1633114252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,6 +1985,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1134715252267176379, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134715252267176379, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2829139449982800955, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1965,9 +2001,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4322269352092969277, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4322269352092969277, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7019347119229763577, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
       propertyPath: m_Value
-      value: 9
+      value: 9999
       objectReference: {fileID: 0}
     - target: {fileID: 7019347119229763577, guid: e8cff41de0faa744e93e528ed9870948, type: 3}
       propertyPath: m_MaxValue

@@ -15,8 +15,8 @@ public class BattleHUB : MonoBehaviour
     {
         characterName.text = character.characterName;
         characterHP.text = character.CurrentVitality + "/" 
-            + character.Vitality + "HP";
-        SetCharacterHpSlider(character.CurrentVitality, character.Vitality);
+            + character.MaxVitality + "HP";
+        SetCharacterHpSlider(character.CurrentVitality, character.MaxVitality);
     }
 
     public void SetCharacterHpSlider(int currentHp, int maxHp) 
