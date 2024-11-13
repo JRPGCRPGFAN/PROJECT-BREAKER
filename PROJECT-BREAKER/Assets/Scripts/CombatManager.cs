@@ -14,7 +14,6 @@
     of the characters are behind the background image.
     Bug 02 - I sometimes have to manually set the current vitality to the max 
     vitality in the CombatManager class otherwise the current vitality will be 0.
-    Not sure why, but maybe someone would have said ghosts are causing it!
     
  */
 using System;

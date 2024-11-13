@@ -47,7 +47,7 @@ public class PlayerActionHUB : MonoBehaviour
     {
         // TODO: Select Target. Enable that UI for the player to select the target.
         //enemy.
-        enemy.GetAttacked(ally.Attack());
+        enemy.Defend(ally.Attack());
     }
 
 }
